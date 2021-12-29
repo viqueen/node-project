@@ -1,5 +1,11 @@
 import React from 'react';
+import viqueenIcon from '../assets/viqueen-icon.png';
 
 export default function Application() {
-    return <h1>Hei Hei</h1>;
+    return (
+        <div>
+            <h1>Hei</h1>
+            <img src={viqueenIcon} />
+        </div>
+    );
 }
