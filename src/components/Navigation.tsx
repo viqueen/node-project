@@ -26,7 +26,7 @@ const ViqueenHome = () => {
 
 export default function Navigation() {
     return (
-        <div style={{ top: 0, position: 'fixed', left: 0, width: '100%' }}>
+        <div>
             <AtlassianNavigation
                 label="viqueen.org"
                 primaryItems={[<PrimaryButton>viqueen.org</PrimaryButton>]}
