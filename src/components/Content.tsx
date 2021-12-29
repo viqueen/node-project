@@ -1,5 +1,6 @@
 import React from 'react';
 import Page, { Grid, GridColumn } from '@atlaskit/page';
+import { fontFamily } from '@atlaskit/theme';
 
 export default function Content() {
     return (
