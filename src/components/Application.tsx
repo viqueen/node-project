@@ -1,11 +1,25 @@
 import React from 'react';
 import viqueenIcon from '../assets/viqueen-icon.png';
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-export default function Application() {
+const Home = () => {
     return (
         <div>
             <h1>Hei</h1>
-            <img src={viqueenIcon} />
+            <img src={viqueenIcon} style={{ maxWidth: 60 }} />
         </div>
+    );
+};
+
+export default function Application() {
+    return (
+        <HashRouter>
+            <Switch>
+                <Redirect exact from="/" to="/home" />
+                <Route path="/home">
+                    <Home />
+                </Route>
+            </Switch>
+        </HashRouter>
     );
 }
