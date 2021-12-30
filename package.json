@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@atlaskit/atlassian-navigation": "^2.0.2",
+    "@atlaskit/heading": "^0.1.5",
     "@atlaskit/page": "^12.1.0",
     "@atlaskit/renderer": "^84.1.1",
     "@atlaskit/theme": "^12.0.2",
