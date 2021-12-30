@@ -9,14 +9,25 @@ export default function Content() {
     return (
         <div style={{ marginTop: 60 }}>
             <Page>
-                <Grid>
+                <Grid spacing="compact">
                     <GridColumn>
-                        <div style={{ marginBottom: 40 }}>
+                        <div style={{ marginBottom: 30 }}>
                             <Heading level="h800">
                                 {nodeProjectContent.title}
                             </Heading>
                         </div>
-                        <ReactRenderer document={nodeProjectContent.document} />
+                    </GridColumn>
+                    <GridColumn>
+                        <div
+                            style={{
+                                overflow: 'auto',
+                                maxHeight: '1300px'
+                            }}
+                        >
+                            <ReactRenderer
+                                document={nodeProjectContent.document}
+                            />
+                        </div>
                     </GridColumn>
                 </Grid>
             </Page>
