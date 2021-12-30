@@ -4,6 +4,8 @@ import { ReactRenderer } from '@atlaskit/renderer';
 
 import nodeProjectContent from '../assets/node-project-content.json';
 import Heading from '@atlaskit/heading';
+import { Provider } from '@atlaskit/smart-card';
+import SimpleCardClient from './cards/SimpleCardClient';
 
 export default function Content() {
     return (
@@ -24,9 +26,11 @@ export default function Content() {
                                 maxHeight: '1300px'
                             }}
                         >
-                            <ReactRenderer
-                                document={nodeProjectContent.document}
-                            />
+                            <Provider client={new SimpleCardClient()}>
+                                <ReactRenderer
+                                    document={nodeProjectContent.document}
+                                />
+                            </Provider>
                         </div>
                     </GridColumn>
                 </Grid>
